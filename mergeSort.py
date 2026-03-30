@@ -10,9 +10,10 @@ def merge(A , p:int, q:int, r:int):
   i = p ; j = q+1 ; t = 0
   tmp = [0 for i in range(len(A))]
   while i <= q and j <= r :
-    tmp[t] = A[i] ; t+= 1; i+= 1
-  else :
-    tmp[t] = A[j]; t+=1; j+=1
+    if A[i] <= A[j]
+      tmp[t] = A[i] ; t+= 1; i+= 1
+    else :
+      tmp[t] = A[j]; t+=1; j+=1
   while j <= r:
     tmp[t] = A[j]; t+=1; j+=1
   i = p; t = 0
